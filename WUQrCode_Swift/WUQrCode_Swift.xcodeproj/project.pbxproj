@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57AAD5C71CDC7E2F008BD378 /* QRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57AAD5C61CDC7E2F008BD378 /* QRCodeViewController.xib */; };
 		57E4F6E41CDC3ADB000DB033 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4F6E31CDC3ADB000DB033 /* AppDelegate.swift */; };
 		57E4F6E61CDC3ADB000DB033 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E4F6E51CDC3ADB000DB033 /* ViewController.swift */; };
 		57E4F6E91CDC3ADB000DB033 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E4F6E71CDC3ADB000DB033 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57AAD5C61CDC7E2F008BD378 /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
 		57E4F6E01CDC3ADB000DB033 /* WUQrCode_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WUQrCode_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E4F6E31CDC3ADB000DB033 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57E4F6E51CDC3ADB000DB033 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				57E4F6E31CDC3ADB000DB033 /* AppDelegate.swift */,
 				57E4F6E51CDC3ADB000DB033 /* ViewController.swift */,
 				57E4F7111CDC3B25000DB033 /* QRCodeViewController.swift */,
+				57AAD5C61CDC7E2F008BD378 /* QRCodeViewController.xib */,
 				57E4F6E71CDC3ADB000DB033 /* Main.storyboard */,
 				57E4F6EA1CDC3ADB000DB033 /* Assets.xcassets */,
 				57E4F6EC1CDC3ADB000DB033 /* LaunchScreen.storyboard */,
@@ -196,6 +199,7 @@
 				TargetAttributes = {
 					57E4F6DF1CDC3ADB000DB033 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = RX5J876LD9;
 					};
 					57E4F6F31CDC3ADB000DB033 = {
 						CreatedOnToolsVersion = 7.3;
@@ -234,6 +238,7 @@
 			files = (
 				57E4F6EE1CDC3ADB000DB033 /* LaunchScreen.storyboard in Resources */,
 				57E4F6EB1CDC3ADB000DB033 /* Assets.xcassets in Resources */,
+				57AAD5C71CDC7E2F008BD378 /* QRCodeViewController.xib in Resources */,
 				57E4F6E91CDC3ADB000DB033 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WUQrCode_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -417,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WUQrCode_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -490,6 +497,7 @@
 				57E4F70A1CDC3ADB000DB033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57E4F70B1CDC3ADB000DB033 /* Build configuration list for PBXNativeTarget "WUQrCode_SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +506,7 @@
 				57E4F70D1CDC3ADB000DB033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57E4F70E1CDC3ADB000DB033 /* Build configuration list for PBXNativeTarget "WUQrCode_SwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +515,7 @@
 				57E4F7101CDC3ADB000DB033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

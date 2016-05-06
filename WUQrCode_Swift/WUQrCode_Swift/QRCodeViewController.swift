@@ -15,14 +15,45 @@ class QRCodeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = "扫一扫"
+        
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        
         super.viewWillAppear(animated)
+        navigationController?.navigationBar.hidden = true
+        view.addSubview(navBar)
         startScanning()
+        
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        navBar.removeFromSuperview()
+        navigationController?.navigationBar.hidden = false
+    }
+
+    
     //MARK: - Private
+    
+    private lazy var navBar: UINavigationBar = {
+        let bar = UINavigationBar(frame: CGRectMake(0 ,0 , UIScreen.mainScreen().bounds.size.width,64))
+        bar.barTintColor = UIColor(white: 0.0, alpha: 0.2)
+        
+        let titleItem = UINavigationItem()
+        let titleLabel = UILabel()
+        titleLabel.font = UIFont.boldSystemFontOfSize(18)
+        titleLabel.text = "扫一扫"
+        titleLabel.textColor = UIColor.whiteColor()
+        titleItem.titleView = titleLabel
+        titleLabel.sizeToFit()
+        bar.pushNavigationItem(titleItem, animated: true)
+        
+        return bar
+    }()
+    
     private func startScanning() {
         if !session.canAddInput(deviceInput) {
             return
@@ -31,16 +62,16 @@ class QRCodeViewController: UIViewController {
             return
         }
         session.addInput(deviceInput)
-        session.canAddOutput(metaDataOutput)
+        session.addOutput(metaDataOutput)
         
         metaDataOutput.metadataObjectTypes = metaDataOutput.availableMetadataObjectTypes
         metaDataOutput.setMetadataObjectsDelegate(self, queue: dispatch_get_main_queue())
         
-        session.startRunning()
+        view.layer.insertSublayer(preivewLayer, atIndex: 0)
         
+        session.startRunning()
     }
-
-    //MARK: - 懒加载
+    
     private lazy var session: AVCaptureSession = AVCaptureSession()
     
     private lazy var deviceInput: AVCaptureDeviceInput? = {
@@ -55,10 +86,17 @@ class QRCodeViewController: UIViewController {
             return nil
         }
         
-        
     }()
     
     private lazy var metaDataOutput: AVCaptureMetadataOutput = AVCaptureMetadataOutput()
+    
+    private lazy var preivewLayer: AVCaptureVideoPreviewLayer = {
+        let layer = AVCaptureVideoPreviewLayer(session: self.session)
+        layer.frame = UIScreen.mainScreen().bounds
+        layer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        return layer
+    }()
+
     
 }
 

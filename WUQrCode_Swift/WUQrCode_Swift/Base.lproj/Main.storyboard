@@ -21,7 +21,7 @@
                                 <rect key="frame" x="263" y="118" width="75" height="30"/>
                                 <state key="normal" title="二维码扫描"/>
                                 <connections>
-                                    <segue destination="X6d-1C-pgy" kind="push" id="1wp-wS-Fae"/>
+                                    <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r2C-SZ-Wk2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -36,25 +36,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="942" y="401"/>
-        </scene>
-        <!--二维码扫描-->
-        <scene sceneID="4Iv-vE-Wbp">
-            <objects>
-                <viewController id="X6d-1C-pgy" customClass="QRCodeViewController" customModule="WUQrCode_Swift" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3oo-0b-3t8"/>
-                        <viewControllerLayoutGuide type="bottom" id="c4V-G7-p02"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cnF-q8-BdG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="二维码扫描" id="Jga-ka-5J5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lxk-a9-j7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1642" y="401"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3eF-Jl-21X">
